@@ -137,20 +137,16 @@ class ConstantNode(Node):
         return [0]
 
 
-def SumNode(Node):
-    '''Addition of two numbers. Special case to be abstracted later
-    the code actually works for any amount of numbers, but the constructor forces two numbers
-    '''
-
-    def __init__(self, children, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.add_child(*children)
+# def SumNode(Node):
+#     def __init__(self, children, *args, **kwargs):
+#         super().__init__(*args, **kwargs)
+#         self.add_child(*children)
     
-    def evaluate(self, child_values):
-        return sum(child_values)
+#     def evaluate(self, child_values):
+#         return sum(child_values)
     
-    def derivatives(self, child_values):
-        return [1 for _ in child_values]
+#     def derivatives(self, child_values):
+#         return [1 for _ in child_values]
 
 
 class BinopNode(Node):
